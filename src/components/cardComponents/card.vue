@@ -13,8 +13,8 @@ const props = defineProps({
 </script>
 <template>
   <div>
-    <div class="flex md:flex-row sm:flex-col gap-3 bg-[#3c3e44] md:w-[600px] rounded-xl md:h-[220px] sm:h-[unset] sm:max-w-[300px]">
-      <img class="rounded-l-xl" :src="props.image" alt="card image" />
+    <div class="flex md:flex-row sm:flex-col gap-3 bg-[#3c3e44] md:w-[600px] rounded-xl md:h-[220px] sm:h-[unset] sm:w-[310px] ">
+      <img class="md:rounded-l-xl sm:rounded-t-xl md:rounded-tr-none" :src="props.image" alt="card image" />
       <div class="flex flex-col justify-between h-full p-3">
         <div class="flex gap-1 flex-col">
           <h2 class="text-2xl text-white font-[800]">{{ props.name }}</h2>
