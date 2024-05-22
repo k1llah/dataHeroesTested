@@ -20,7 +20,7 @@ onMounted(() => {
         :status="item.status"
         :species="item.species"
         :location="item.location.name"
-        :episode="item.episode[index]"
+        :episode="item.episode[index].name"
         :gender="item.gender"
       />
     </div>
