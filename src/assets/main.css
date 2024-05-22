@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+  background-color: #d6e7ffc7;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --swiper-navigation-size: 35px !important;
+  --swiper-theme-color: #deecff !important;
+}
+* {
+  font-family: sans-serif;
+}
