@@ -33,13 +33,13 @@ watch(pageNumber, (newValue) => {
     <div class="flex gap-5 items-center md:flex-row sm:flex-col">
       <div class="flex sm:flex-col sm:w-32 md:flex-row md:w-[unset]">
       <input type="text" placeholder="Search by name" class="bg-transparent p-1 border-b-[1px] border-black outline-none" v-model="filters.name">
-      <select name="filterBy" @change="handleFilter" class="bg-transparent p-1" id="">
+      <select name="filterBy" @change="handleFilter" class="outline-none bg-transparent p-1" id="">
         <option value="">Choose a filter</option>
         <option value="alive">Status: Alive</option>
         <option value="dead">Status: Dead</option>
       </select>
     </div>
-    <div class="flex gap-3">
+    <div class="flex gap-3 items-center">
       <button class="text-[14px] border-b-[1px] border-green-400 p-1" @click="filters.items = '', filters.getData(pageNumber)">Применить</button>
       <div class="flex flex-col justify-center items-center">
         <p>Page {{ pageNumber }}</p>

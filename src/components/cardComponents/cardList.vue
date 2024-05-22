@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import card from "./card.vue";
-import { onMounted, ref, watch, watchEffect } from "vue";
+import { onMounted } from "vue";
 import axios from "axios";
 import { useFilters } from "@/stores/filters";
 const filters = useFilters();
