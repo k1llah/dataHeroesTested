@@ -27,7 +27,7 @@ watch(pageNumber, (newValue) => {
 });
 </script>
 <template>
- <header class="bg-[#f5f5f5] p-5">
+ <header class="bg-[#f5f5f5] p-7">
    <div class="w-full min-h-20 flex items-center justify-between">
     <h3 class="text-xl">Header logo</h3>
     <div class="flex gap-5 items-center md:flex-row sm:flex-col">

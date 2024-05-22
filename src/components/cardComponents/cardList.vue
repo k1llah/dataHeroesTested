@@ -5,22 +5,22 @@ import axios from "axios";
 import { useFilters } from "@/stores/filters";
 const filters = useFilters();
 
-onMounted(() => {
+onMounted(async() => {
   filters.getData(parseInt(localStorage.getItem("pageNumber") || "1"));
 });
 </script>
 <template>
-  <div>
-    <div class="flex flex-wrap gap-7 justify-center" v-auto-animate>
+  <div v-auto-animate>
+    <div class="flex flex-wrap gap-7 justify-center" >
       <card
-        v-for="(item, index) in filters.items"
+        v-for="(item, index) in filters.items" v-auto-animate
         :key="item.id"
         :name="item.name"
         :image="item.image"
         :status="item.status"
         :species="item.species"
         :location="item.location.name"
-        :episode="item.episode[index].name"
+        :episode="item.episode[index] ? item.episode[index].name : ''"
         :gender="item.gender"
       />
     </div>

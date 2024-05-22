@@ -24,6 +24,10 @@ const props = defineProps({
               v-if="props.status == 'Alive'"
             ></div>
             <div
+              class="w-[10px] h-[10px] rounded-[50%] bg-slate-500"
+              v-if="props.status == 'unknown'"
+            ></div>
+            <div
               class="w-[10px] h-[10px] rounded-[50%] bg-red-500"
               v-if="props.status == 'Dead'"
             ></div>
@@ -35,11 +39,11 @@ const props = defineProps({
           <p class="text-white font-[700]">{{ props.location }}</p>
         </div>
 
-        <div class="flex flex-col">
+        <div class="flex flex-col" v-if="props.episode">
           <p class="text-slate-400">First seen in:</p>
           
           
-            <h3 class="text-white font-[600]">{{ props.episode }}</h3>
+            <h3 class="text-white font-[600]">{{ props?.episode }}</h3>
           
         </div>
       </div>

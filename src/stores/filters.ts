@@ -22,6 +22,7 @@ export const useFilters = defineStore("filters", {
           `https://rickandmortyapi.com/api/character?page=${page}&name=${this.name}&status=${this.filter}`
         );
 				this.items = data.data.results;
+				if(this.name === ""){
 				const dataEpisodes = await axios.get(`https://rickandmortyapi.com/api/episode?page=${page}&name=${this.name}&status=${this.filter}`);
 				console.log(dataEpisodes.data.results)
 				this.items.episode = dataEpisodes.data.results
@@ -30,8 +31,8 @@ export const useFilters = defineStore("filters", {
 					console.log(dataEpisodes.data.results)
 					el.episode = dataEpisodes.data.results
 					console.log(el.episode)
-					
 				})
+			}
         // const episodeData = await axios.get(`${data.data.results.episode}`);
         // this.items = data.data.results;
 				// console.log(data.data.results[0].episode)
