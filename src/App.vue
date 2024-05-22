@@ -10,7 +10,7 @@ import mainView from './components/mainView.vue';
       <Header/>
         <!-- <RouterView /> -->
         <mainView/>
-        <Footer/>
+        <!-- <Footer/> -->
     </section>
 
   </div>
