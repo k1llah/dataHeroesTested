@@ -10,10 +10,10 @@ onMounted(async() => {
 });
 </script>
 <template>
-  <div v-auto-animate>
-    <div class="flex flex-wrap gap-7 justify-center" >
+  <div>
+    <div class="flex flex-wrap gap-7 justify-center" v-auto-animate>
       <card
-        v-for="(item, index) in filters.items" v-auto-animate
+        v-for="(item, index) in filters.items"
         :key="item.id"
         :name="item.name"
         :image="item.image"
